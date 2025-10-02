@@ -60,7 +60,51 @@ body {
   background-size: 300% 300%;
   animation: gradientBG 12s ease infinite;
   color: white;
-  text-align: center;
+  text-align: left; /* Align text left */
+  padding: 0 5%;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.hero .name {
+  display: block; /* Forces name onto a new line */
+  font-size: 3.5rem; /* Bigger name */
+  font-weight: 700;
+  color: #ffe066;
+}
+
+.hero p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 50%; /* circle photo */
+  border: 5px solid white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
 @keyframes gradientBG {
