@@ -346,3 +346,9 @@ footer {
   margin-bottom: 0.8rem;
   line-height: 1.6;
 }
+.activities-list {
+  margin-left: 1.5rem;   /* indentation */
+  padding-left: 0.5rem;  /* small spacing for bullets */
+  list-style-type: disc; /* keep normal bullets */
+  line-height: 1.6;
+}
