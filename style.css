@@ -192,3 +192,16 @@ footer {
   color: white;
   margin-top: 2rem;
 }
+
+/* Start hidden */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When visible */
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
