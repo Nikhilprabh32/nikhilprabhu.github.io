@@ -352,3 +352,9 @@ footer {
   list-style-type: disc; /* keep normal bullets */
   line-height: 1.6;
 }
+.activities-title {
+  margin-top: 1.5rem; /* adds extra space above "Activities" */
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #333;
+}
