@@ -388,7 +388,7 @@ strong.maron-gradient {
 
 /* Individual Card */
 .experience-card {
-  background: linear-gradient(135deg, #4dabf7, #228be6);
+  background: linear-gradient(135deg, #4dabf7, #228be6) !important;
   color: #fff;
   padding: 2rem;
   border-radius: 20px;
