@@ -364,3 +364,82 @@ strong.maron-gradient {
   -webkit-text-fill-color: transparent;
   font-weight: bold; /* keeps it bold but same size */
 }
+/* Section Title */
+.experience-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Container for cards */
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Individual Card */
+.experience-card {
+  background: linear-gradient(135deg, #4dabf7, #228be6);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 650px;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Logo/Icon */
+.experience-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* Text inside card */
+.experience-card h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.company {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin: 0 0.3rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+}
