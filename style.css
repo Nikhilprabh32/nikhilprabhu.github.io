@@ -353,10 +353,12 @@ footer {
   line-height: 1.6;
 }
 .activities-title {
-  margin-top: 1.5rem; /* adds extra space above "Activities" */
+  margin-top: 3rem; /* adds extra space above "Activities" */
   font-weight: 600;
   font-size: 1.2rem;
   color: #333;
+
+ 
 }
 strong.maron-gradient {
   background: linear-gradient(90deg, #500000, #800000); /* Aggie Maroon */
