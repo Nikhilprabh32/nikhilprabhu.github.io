@@ -367,8 +367,8 @@ strong .maron-gradient {
   font-weight: bold; /* keeps it bold but same size */
 }
 /* Section Title */
- #projects .experience-title {
-  margin-top: 3rem;
+ .experience-title {
+  
    text-align: center;
   font-size: 3.2rem;
   font-weight: 900;
