@@ -360,15 +360,16 @@ footer {
 
  
 }
-strong.maron-gradient {
+strong .maron-gradient {
   background: linear-gradient(90deg, #500000, #800000); /* Aggie Maroon */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold; /* keeps it bold but same size */
 }
 /* Section Title */
-.experience-title {
-  text-align: center;
+ #projects .experience-title {
+  margin-top: 3rem;
+   text-align: center;
   font-size: 3.2rem;
   font-weight: 900;
   margin-bottom: 3rem;
