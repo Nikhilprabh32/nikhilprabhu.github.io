@@ -100,11 +100,13 @@ body {
 }
 
 .hero-image img {
-  width: 300px;
-  height: auto;
-  border-radius: 50%; /* circle photo */
-  border: 5px solid white;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  width: 180px;        /* smaller rectangle */
+  height: 220px;       /* rectangular ratio */
+  object-fit: cover;   /* keeps proportions, crops if needed */
+  border-radius: 12px; /* slight rounding for a modern look */
+  border: 3px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 
 }
   
