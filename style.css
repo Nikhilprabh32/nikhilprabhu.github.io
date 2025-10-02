@@ -500,8 +500,8 @@ strong .maron-gradient {
 
 /* Project Image */
 .project-image {
-  width: 140px;
-  height: 100px;
+  width: 120px;
+  height: 85px;
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
