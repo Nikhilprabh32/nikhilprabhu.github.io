@@ -559,3 +559,49 @@ strong .maron-gradient {
   margin: auto;
   line-height: 1.6;
 }
+
+.project-detail {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-hero {
+  width: 300px;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.project-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.project-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  line-height: 1.8;
+}
+
+.project-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.project-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #228be6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
