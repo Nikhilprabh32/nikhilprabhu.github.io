@@ -231,7 +231,7 @@ footer {
 
 /* Stronger ABOUT ME */
 .section-subtitle {
-  font-size: 1rem; /* slightly larger */
+  font-size: 1.2rem; /* slightly larger */
   font-weight: 800; /* bolder */
   letter-spacing: 2.5px;
   margin-bottom: 1.2rem;
@@ -240,15 +240,26 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.5rem;
   text-shadow: 0px 1px 3px rgba(0,0,0,0.15); /* subtle shadow */
+}
+/* gradient line under "ABOUT ME" */
+.section-subtitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin-top: 6px;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb);
+  border-radius: 2px;
 }
 
 /* Big heading */
 .about-left h2 {
-  font-size: 3.2rem; /* a bit bigger */
+  font-size: 3.6rem; /* a bit bigger */
   font-weight: 800;
-  line-height: 1.3;
+  line-height: 1.2;
+  margin-top: 1rem;
 }
 
 /* Blue gradient for "I like to" */
