@@ -1,98 +1,148 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nikhil Prabhu | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Nikhil Prabhu</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#activities">Extracurriculars</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Hero / Home -->
-  <section id="home" class="hero">
-    <div class="hero-text fade-in-up">
-      <h1>Hello, my name is <span class="highlight">Nikhil Prabhu</span></h1>
-    </div>
-  </section>
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+  scroll-behavior: smooth;
+}
 
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <h2>🚀 Projects</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Project One</h3>
-        <p>Brief description of your project. Link to GitHub or demo.</p>
-      </div>
-      <div class="card">
-        <h3>Project Two</h3>
-        <p>Brief description of your project. Link to GitHub or demo.</p>
-      </div>
-    </div>
-  </section>
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
 
-  <!-- Activities -->
-  <section id="activities" class="section alt">
-    <h2>🌟 Extracurriculars</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Club Leadership</h3>
-        <p>Details about your role and impact.</p>
-      </div>
-      <div class="card">
-        <h3>Volunteering</h3>
-        <p>Community work, hackathons, or competitions.</p>
-      </div>
-    </div>
-  </section>
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #0073e6;
+}
 
-  <!-- About -->
-  <section id="about" class="section">
-    <h2>🙋 About Me</h2>
-    <p>
-      I’m a Computer Science student passionate about building impactful software
-      and contributing to innovative projects. I enjoy problem-solving, leading
-      initiatives, and continuous learning.
-    </p>
-  </section>
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
 
-  <!-- Contact -->
-  <section id="contact" class="section alt">
-    <h2>📬 Contact</h2>
-    <p>Email: <a href="mailto:you@email.com">you@email.com</a></p>
-    <p>
-      <a href="https://github.com/YOUR-USERNAME" target="_blank">GitHub</a> | 
-      <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a>
-    </p>
-  </section>
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
-  <footer>
-    <p>© 2025 Nikhil Prabhu</p>
-  </footer>
+.nav-links a:hover {
+  color: #0073e6;
+}
 
-  <!-- Smooth Scrolling -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-</body>
-</html>
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0073e6, #00b4d8, #90e0ef);
+  background-size: 300% 300%;
+  animation: gradientBG 12s ease infinite;
+  color: white;
+  text-align: center;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+/* Fade-in-up animation */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 2s ease forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.highlight {
+  color: #ffe066;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section.alt {
+  background: #f1f1f1;
+}
+
+.section h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.section p {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #222;
+  color: white;
+  margin-top: 2rem;
+}
