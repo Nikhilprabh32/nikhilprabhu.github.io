@@ -358,3 +358,9 @@ footer {
   font-size: 1.2rem;
   color: #333;
 }
+strong.maroon-gradient {
+  background: linear-gradient(90deg, #500000, #800000); /* Aggie Maroon */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold; /* keeps it bold but same size */
+}
