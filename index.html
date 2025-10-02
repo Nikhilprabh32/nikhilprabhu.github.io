@@ -24,13 +24,13 @@
 
   <!-- Hero / Home -->
   <section id="home" class="hero">
-    <div class="hero-text">
-      <h1 class="fade-in-up">Hello, my name is <span class="highlight">Nikhil Prabhu</span></h1>
+    <div class="hero-text fade-in-up">
+      <h1>Hello, my name is <span class="highlight">Nikhil Prabhu</span></h1>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects">
+  <section id="projects" class="section">
     <h2>🚀 Projects</h2>
     <div class="card-grid">
       <div class="card">
@@ -45,7 +45,7 @@
   </section>
 
   <!-- Activities -->
-  <section id="activities">
+  <section id="activities" class="section alt">
     <h2>🌟 Extracurriculars</h2>
     <div class="card-grid">
       <div class="card">
@@ -60,17 +60,17 @@
   </section>
 
   <!-- About -->
-  <section id="about">
+  <section id="about" class="section">
     <h2>🙋 About Me</h2>
     <p>
-      I'm a Computer Science student passionate about building impactful software
+      I’m a Computer Science student passionate about building impactful software
       and contributing to innovative projects. I enjoy problem-solving, leading
       initiatives, and continuous learning.
     </p>
   </section>
 
   <!-- Contact -->
-  <section id="contact">
+  <section id="contact" class="section alt">
     <h2>📬 Contact</h2>
     <p>Email: <a href="mailto:you@email.com">you@email.com</a></p>
     <p>
@@ -92,22 +92,6 @@
           behavior: 'smooth'
         });
       });
-    });
-
-    // Intersection Observer for scroll animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1 // Trigger when 10% of element is visible
-    });
-
-    // Observe all sections except hero and footer
-    document.querySelectorAll('section:not(.hero), footer').forEach((el) => {
-      observer.observe(el);
     });
   </script>
 </body>
