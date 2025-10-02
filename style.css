@@ -5,11 +5,9 @@
   box-sizing: border-box;
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
-
 body {
   scroll-behavior: smooth; /* smooth scrolling when clicking navbar links */
 }
-
 /* Navbar */
 header {
   position: fixed;
@@ -19,15 +17,25 @@ header {
   background: white;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   z-index: 1000;
+  opacity: 0;
+  animation: fadeInDown 0.8s ease forwards;
 }
-
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
 }
-
 nav a {
   text-decoration: none;
   color: #333;
@@ -35,17 +43,14 @@ nav a {
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
 nav a:hover {
   color: #0073e6;
 }
-
 nav .logo {
   font-weight: bold;
   font-size: 1.2rem;
   color: #0073e6;
 }
-
 /* Hero Section */
 .hero {
   height: 100vh;
@@ -59,19 +64,16 @@ nav .logo {
   text-align: center;
   padding: 0 2rem;
 }
-
 @keyframes gradientBG {
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
 }
-
 .hero h1 {
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.2;
 }
-
 /* Fade-in-up animation */
 .fade-in-up {
   opacity: 0;
@@ -79,7 +81,6 @@ nav .logo {
   animation: fadeUp 2s ease forwards;
   animation-delay: 0.5s;
 }
-
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -90,30 +91,33 @@ nav .logo {
     transform: translateY(0);
   }
 }
-
 .highlight {
   color: #ffe066; /* Highlight color for your name */
 }
-
 /* Section Styling (Projects, About, etc.) */
 section {
   padding: 5rem 2rem;
   text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
+/* Class to apply when section is in view */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #0073e6;
 }
-
 section p {
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
   color: #444;
 }
-
 /* Footer */
 footer {
   background: #f4f4f4;
@@ -121,4 +125,11 @@ footer {
   text-align: center;
   color: #555;
   margin-top: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+footer.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
