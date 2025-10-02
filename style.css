@@ -465,6 +465,10 @@ strong .maron-gradient {
   -webkit-text-fill-color: transparent;
 }
 
+.projects-section {
+  margin-top: 6rem; /* pushes Projects down from the section above */
+}
+
 /* Container */
 .projects-container {
   display: flex;
