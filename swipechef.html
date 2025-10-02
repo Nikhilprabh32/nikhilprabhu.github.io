@@ -3,37 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SwipeChef – Project</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>SwipeChef | Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <section class="project-detail-section">
-    <div class="project-detail-container">
-      
-      <h1 class="experience-title blue-gradient">SwipeChef</h1>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Nikhil Prabhu</div>
+    </nav>
+  </header>
 
-      <img src="SwipeChef.png" alt="SwipeChef Logo" class="project-image" />
-
-      <p class="project-description">
-        SwipeChef is a meal-prep platform designed to make cooking easier by 
-        automating recipe discovery and grocery planning. Think of it as 
-        <strong>“Meal Prep on Steroids.”</strong>
-      </p>
-
-      <p class="project-description">
-        Features include:
-      </p>
-      <ul class="activities-list">
-        <li><strong>Smart Recipe Matching</strong> – recommends meals based on preferences and pantry items</li>
-        <li><strong>One-Click Grocery List</strong> – automatically generates and organizes ingredients</li>
-        <li><strong>Scalable Tech</strong> – built with AI integrations and mobile-first design</li>
-      </ul>
-
-      <a href="index.html#projects" class="project-link">
-        <i class="fas fa-arrow-left"></i> Back to Projects
-      </a>
+  <!-- Hero / Home -->
+  <section id="home" class="hero">
+  <div class="hero-content">
+    <div class="hero-text fade-in-section">
+      <h1>
+        Instant Meal Prep <br>
+        <span class="highlight">SwipeChef</span>
+      </h1>
     </div>
+    <div class="hero-image fade-in-section">
+      <img src="SwipeChef.png" alt="SwipeChef">
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section fade-in-section">
+  <div class="about-left">
+    <h3 class="section-subtitle">Description</h3>
+    <h2>
+      <span class="blue-gradient">What is</span> 
+      <span class="pink-gradient">SwipeChef?</span>
+    </h2>
+  </div>
+  <div class="about-right">
+    <p>
+      Ready Set Recruit is a recruitment automation platform I built to streamline the networking process for students pursuing highly competitive careers like Investment Banking and Consulting. 
+      Instead of spending hours every day sending cold networking emails with extremely low response rates (<1%), students can focus on preparing for interviews, technicals, and casing.
+    </p>
+    <p>
+      Currently, the platform is released exclusively to Texas A&M students recruiting for Investment Banking, with 30–40 daily users during the recruiting season (October–March).
+      The goal is to level the playing field for non-target students, reducing the manual networking burden and giving them more time to sharpen the skills that actually secure offers.
+    </p>
+  </div>
+</section>
+
+  
+  <!-- Contact -->
+  <section id="contact" class="section alt">
+    <h2>📬 Contact</h2>
+    <p>Email: <a href="nikhilprabhu77@gmail.com">nikhilprabhu77@gmail.com</a></p>
+    <p>
+      <a href="https://www.linkedin.com/in/nikhil-prabhu-6b2754284/" target="_blank">LinkedIn</a>
+    </p>
   </section>
+
+  <footer>
+    <p>© 2025 Nikhil Prabhu</p>
+  </footer>
+
+  <!-- Smooth Scrolling -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+  <script>
+  // Fade in on scroll
+  const faders = document.querySelectorAll('.fade-in-section');
+
+  const appearOptions = {
+    threshold: 0.1, // how much of element must be visible
+    rootMargin: "0px 0px -50px 0px" // slight offset
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      appearOnScroll.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
 </body>
 </html>
