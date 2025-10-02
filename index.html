@@ -5,38 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nikhil Prabhu | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation -->
   <header>
-    <h1>Hello, I’m Nikhil Prabhu</h1>
-    <p>CS Student | Developer | Leader</p>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#activities">Extracurriculars</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+    <nav class="navbar">
+      <div class="logo">Nikhil Prabhu</div>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#activities">Extracurriculars</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="projects">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I’m <span class="highlight">Nikhil</span></h1>
+      <p>CS Student | Developer | Leader</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
     <h2>Projects</h2>
     <p>Showcase your coding or research projects here with links.</p>
   </section>
 
-  <section id="activities">
+  <!-- Activities -->
+  <section id="activities" class="section alt">
     <h2>Extracurriculars</h2>
     <p>Clubs, leadership roles, competitions, etc.</p>
   </section>
 
-  <section id="about">
+  <!-- About -->
+  <section id="about" class="section">
     <h2>About Me</h2>
     <p>A short bio and maybe your resume link.</p>
   </section>
 
-  <section id="contact">
+  <!-- Contact -->
+  <section id="contact" class="section alt">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:you@email.com">you@email.com</a></p>
-    <p><a href="https://github.com/Nikhilprabh32">GitHub</a> | <a href="https://linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a></p>
+    <p><a href="https://github.com/YOUR-USERNAME" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a></p>
   </section>
+
+  <footer>
+    <p>© 2025 Nikhil Prabhu</p>
+  </footer>
+
+  <!-- Smooth Scrolling -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+
