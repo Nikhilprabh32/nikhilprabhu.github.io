@@ -78,6 +78,8 @@ body {
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUp 2s ease forwards;
+  animation-delay: 0.5s; /* wait half a second */
+}
 }
 
 @keyframes fadeUp {
