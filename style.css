@@ -100,11 +100,16 @@ body {
 }
 
 .hero-image img {
-  width: 300px;
-  height: auto;
-  border-radius: 100%; /* circle photo */
+  .hero-image img {
+  width: 280px;        /* adjust size as needed */
+  height: auto;        /* keeps proportions */
+  object-fit: cover;   /* makes sure it fills nicely */
+  border-radius: 12px; /* slightly rounded edges */
   border: 5px solid white;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+  
+  
 }
 
 @keyframes gradientBG {
