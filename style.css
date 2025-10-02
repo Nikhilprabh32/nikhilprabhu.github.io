@@ -353,7 +353,7 @@ footer {
   line-height: 1.6;
 }
 .activities-title {
-  margin-top: 3rem; /* adds extra space above "Activities" */
+  margin-top: 4rem; /* adds extra space above "Activities" */
   font-weight: 600;
   font-size: 1.2rem;
   color: #333;
