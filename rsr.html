@@ -109,10 +109,7 @@
   </div>
 </section>
 
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <span class="lightbox-close">&times;</span>
-  <img class="lightbox-content" id="lightbox-img">
-</div>
+ 
 
   
 
@@ -162,6 +159,14 @@
   faders.forEach(fader => {
     appearOnScroll.observe(fader);
   });
+
+    <!-- Lightbox (hidden until clicked) -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+    
 </script>
 </body>
 </html>
