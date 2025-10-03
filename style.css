@@ -32,6 +32,17 @@ body {
   font-size: 1.2rem;
   color: #0073e6;
 }
+.back-home {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: #0077ff;
+  transition: color 0.3s ease;
+}
+
+.back-home:hover {
+  color: #0056b3;
+}
 
 .nav-links {
   list-style: none;
