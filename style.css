@@ -622,12 +622,6 @@ strong .maron-gradient {
   padding: 0 20px;
 }
 
-.project-showcase h2 {
-  text-align: center;
-  font-size: 2.4rem;
-  margin-bottom: 50px;
-}
-
 .showcase-row {
   display: flex;
   align-items: center;
@@ -640,11 +634,19 @@ strong .maron-gradient {
   flex-direction: row-reverse;
 }
 
+.showcase-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .showcase-image img {
   width: 100%;
-  max-width: 450px;
+  max-width: 500px; /* controls size */
+  height: auto;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  object-fit: cover;
 }
 
 .showcase-text {
@@ -662,7 +664,7 @@ strong .maron-gradient {
   color: #444;
 }
 
-/* Mobile responsive */
+/* Responsive stacking */
 @media (max-width: 768px) {
   .showcase-row,
   .showcase-row.reverse {
@@ -674,6 +676,7 @@ strong .maron-gradient {
     max-width: 100%;
   }
 }
+
 
 
 
